@@ -1,0 +1,20 @@
+app:
+  component: 'firetut'
+  data:
+    sources:        
+  pythonpath: '..'  
+  port: 8888
+
+data:
+  sources:
+    - name: session
+      connector: redis
+components:
+  - id: firetut
+    class: firetut.app.FiretutComponent
+    enabled: true
+session:
+  type: redis
+  enabled:   
+  data:
+    source: session
